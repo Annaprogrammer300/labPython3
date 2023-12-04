@@ -290,6 +290,10 @@ class Window(QWidget):
         """
         path = self.folderpath.split('\\')[-1]
         libs.otzv_paths.make_csv(path)
+        compleate = QMessageBox()
+        compleate.setWindowTitle("Message")
+        compleate.setText("Task completed")
+        compleate.exec()
 
     def create_dataset_2(self) -> None:
         """
@@ -299,6 +303,10 @@ class Window(QWidget):
         new_path = self.new_folderpath.split('\\')[-1]
         print(old_path, new_path)
         libs.otzv_rename.main(old_path, new_path)
+        compleate = QMessageBox()
+        compleate.setWindowTitle("Message")
+        compleate.setText("Task completed")
+        compleate.exec()
 
     def create_dataset_random(self) -> None:
         """
@@ -308,6 +316,10 @@ class Window(QWidget):
         new_path = self.new_folderpath.split('\\')[-1]
         print(old_path, new_path)
         libs.otzv_random.main(old_path, new_path)
+        compleate = QMessageBox()
+        compleate.setWindowTitle("Message")
+        compleate.setText("Task completed")
+        compleate.exec()
 
     def next_1(self) -> None:
         """ The function gets the file text from the iterator for class 1"""
