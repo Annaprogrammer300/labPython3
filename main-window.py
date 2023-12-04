@@ -260,11 +260,11 @@ class Window(QWidget):
         """
         self.folderpath = (QFileDialog.getExistingDirectory(
             self, 'Select Folder')).replace('/', '\\')
-        self.iter1 =  Iterator(self.folderpath, '1')
-        self.iter2 =  Iterator(self.folderpath, '2')
-        self.iter3 =  Iterator(self.folderpath, '3')
-        self.iter4 =  Iterator(self.folderpath, '4')
-        self.iter5 =  Iterator(self.folderpath, '5')
+        self.iter1 = Iterator(self.folderpath, '1')
+        self.iter2 = Iterator(self.folderpath, '2')
+        self.iter3 = Iterator(self.folderpath, '3')
+        self.iter4 = Iterator(self.folderpath, '4')
+        self.iter5 = Iterator(self.folderpath, '5')
 
         self.path_line_edit.setText(self.folderpath)
 
@@ -290,10 +290,6 @@ class Window(QWidget):
         """
         path = self.folderpath.split('\\')[-1]
         libs.otzv_paths.make_csv(path)
-        compleate = QMessageBox()
-        compleate.setWindowTitle("Message")
-        compleate.setText("Task completed")
-        compleate.exec()
 
     def create_dataset_2(self) -> None:
         """
@@ -303,10 +299,6 @@ class Window(QWidget):
         new_path = self.new_folderpath.split('\\')[-1]
         print(old_path, new_path)
         libs.otzv_rename.main(old_path, new_path)
-        compleate = QMessageBox()
-        compleate.setWindowTitle("Message")
-        compleate.setText("Task completed")
-        compleate.exec()
 
     def create_dataset_random(self) -> None:
         """
@@ -316,10 +308,6 @@ class Window(QWidget):
         new_path = self.new_folderpath.split('\\')[-1]
         print(old_path, new_path)
         libs.otzv_random.main(old_path, new_path)
-        compleate = QMessageBox()
-        compleate.setWindowTitle("Message")
-        compleate.setText("Task completed")
-        compleate.exec()
 
     def next_1(self) -> None:
         """ The function gets the file text from the iterator for class 1"""
